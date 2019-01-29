@@ -5,8 +5,8 @@
 
 void print_cases(const std::string& name)
 {
-    char up[8];
-    char lo[8];
+    char up[name.size()];
+    char lo[name.size()];
 
     for(size_t i = 0; i < name.size(); i++)
     {
@@ -15,7 +15,17 @@ void print_cases(const std::string& name)
     }
 
     std::cout << lo << " " << up << std::endl;
+    
+    for(size_t j = 0; j < name.size(); j++)
+    {
+        up[j] = 0;
+      //  up[j*] -> nullptr;
+        lo[j] = 0;
+    }
 }
+
+
+
 
 int main()
 {

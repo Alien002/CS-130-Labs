@@ -43,18 +43,31 @@ public:
         if(n > capacity);
         {
             T * new_data = new T[n];
-            for(size_t i = 0; i < num_entries; i++)
+            delete [] data;
+            for(size_t i = 0; i < num_entries; i++){
                 new_data[i] = data[i];
+            }
             data = new_data;
+            /*
+            for(size_t j = 0; j < num_entries; j++){
+                new_data[j] = 0;
+            }
+            */
+            delete [] new_data;
             capacity = n;
         }
     }
 
     void append(const T& item)
     {
-        resize(num_entries + 1);
-        data[num_entries] = item;
-        num_entries++;
+        try{
+            resize(num_entries + 1);
+            data[num_entries] = item;
+            num_entries++;
+        }
+        catch (const std::out_of_range& oor) {
+            std::cerr << "Out of Range error: " << oor.what() << '\n';
+        }
     }
 
     void clear()
@@ -71,7 +84,7 @@ int main()
     a.append(10);
     a.append(20);
 
-    for(size_t i = 0; i < 1000000; i++)
+    for(size_t i = 0; i < 100; i++)
         a.append(a[i]);
 
     long sum = 0;
