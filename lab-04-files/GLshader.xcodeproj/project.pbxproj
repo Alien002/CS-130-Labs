@@ -1,0 +1,116 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		40198A0B2209F9C000BBD3DE /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		40198A0C2209F9C000BBD3DE /* application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
+		40198A0D2209F9C000BBD3DE /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		40198A0E2209F9C000BBD3DE /* fragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fragment.glsl; sourceTree = "<group>"; };
+		40198A0F2209F9C000BBD3DE /* gl_arcball.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gl_arcball.cpp; sourceTree = "<group>"; };
+		40198A102209F9C000BBD3DE /* gl_arcball.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_arcball.h; sourceTree = "<group>"; };
+		40198A112209F9C000BBD3DE /* gl_viewer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gl_viewer.cpp; sourceTree = "<group>"; };
+		40198A122209F9C000BBD3DE /* gl_viewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_viewer.h; sourceTree = "<group>"; };
+		40198A132209F9C000BBD3DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		40198A142209F9C000BBD3DE /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		40198A152209F9C000BBD3DE /* mat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mat.h; sourceTree = "<group>"; };
+		40198A162209F9C000BBD3DE /* monkey.1.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = monkey.1.mtl; sourceTree = "<group>"; };
+		40198A172209F9C000BBD3DE /* monkey.2.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = monkey.2.mtl; sourceTree = "<group>"; };
+		40198A182209F9C000BBD3DE /* monkey.3.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = monkey.3.mtl; sourceTree = "<group>"; };
+		40198A192209F9C000BBD3DE /* monkey.4.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = monkey.4.mtl; sourceTree = "<group>"; };
+		40198A1A2209F9C000BBD3DE /* monkey.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = monkey.mtl; sourceTree = "<group>"; };
+		40198A1B2209F9C000BBD3DE /* monkey.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = monkey.obj; sourceTree = "<group>"; };
+		40198A1C2209F9C000BBD3DE /* obj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = obj.cpp; sourceTree = "<group>"; };
+		40198A1D2209F9C000BBD3DE /* obj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = obj.h; sourceTree = "<group>"; };
+		40198A1E2209F9C000BBD3DE /* shaders */ = {isa = PBXFileReference; lastKnownFileType = file; path = shaders; sourceTree = "<group>"; };
+		40198A1F2209F9C000BBD3DE /* vec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vec.h; sourceTree = "<group>"; };
+		40198A202209F9C000BBD3DE /* vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vertex.glsl; sourceTree = "<group>"; };
+		40198A21220A014F00BBD3DE /* monkey.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = monkey.scn; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		40A369FF2209F98D00A2F833 = {
+			isa = PBXGroup;
+			children = (
+				40198A0B2209F9C000BBD3DE /* application.cpp */,
+				40198A0C2209F9C000BBD3DE /* application.h */,
+				40198A0D2209F9C000BBD3DE /* CMakeLists.txt */,
+				40198A0E2209F9C000BBD3DE /* fragment.glsl */,
+				40198A0F2209F9C000BBD3DE /* gl_arcball.cpp */,
+				40198A102209F9C000BBD3DE /* gl_arcball.h */,
+				40198A112209F9C000BBD3DE /* gl_viewer.cpp */,
+				40198A122209F9C000BBD3DE /* gl_viewer.h */,
+				40198A132209F9C000BBD3DE /* main.cpp */,
+				40198A142209F9C000BBD3DE /* Makefile */,
+				40198A152209F9C000BBD3DE /* mat.h */,
+				40198A162209F9C000BBD3DE /* monkey.1.mtl */,
+				40198A172209F9C000BBD3DE /* monkey.2.mtl */,
+				40198A182209F9C000BBD3DE /* monkey.3.mtl */,
+				40198A192209F9C000BBD3DE /* monkey.4.mtl */,
+				40198A1A2209F9C000BBD3DE /* monkey.mtl */,
+				40198A1B2209F9C000BBD3DE /* monkey.obj */,
+				40198A21220A014F00BBD3DE /* monkey.scn */,
+				40198A1C2209F9C000BBD3DE /* obj.cpp */,
+				40198A1D2209F9C000BBD3DE /* obj.h */,
+				40198A1E2209F9C000BBD3DE /* shaders */,
+				40198A1F2209F9C000BBD3DE /* vec.h */,
+				40198A202209F9C000BBD3DE /* vertex.glsl */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		40A36A002209F98D00A2F833 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+			};
+			buildConfigurationList = 40A36A032209F98D00A2F833 /* Build configuration list for PBXProject "GLshader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 40A369FF2209F98D00A2F833;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		40A36A042209F98D00A2F833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		40A36A052209F98D00A2F833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40A36A032209F98D00A2F833 /* Build configuration list for PBXProject "GLshader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A36A042209F98D00A2F833 /* Debug */,
+				40A36A052209F98D00A2F833 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40A36A002209F98D00A2F833 /* Project object */;
+}
