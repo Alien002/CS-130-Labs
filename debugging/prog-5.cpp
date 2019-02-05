@@ -53,6 +53,7 @@ struct list
     node * add_after(node* n, const std::string& str)
     {
         node * a = new node(n, n->next, str);
+        
         n->next->prev = a;
         n->next = a;
         return a;
