@@ -1,6 +1,6 @@
-// Name:
-// Quarter, Year:
-// Lab:
+// Name: Alic Lien
+// Quarter, Year: Winter, 2019
+// Lab: 7
 //
 // This file is to be modified by the student.
 // main.cpp
@@ -21,19 +21,39 @@ using namespace std;
 const int WINDOW_WIDTH = 800;
 const int WINDOW_HEIGHT = 800;
 
-
+vector<vec2> cpoints;
 void GL_render()
 {
+    float x,y;
     glClear(GL_COLOR_BUFFER_BIT);
     glutSwapBuffers();
 
     glBegin(GL_LINES);
     glColor3f(1.0f,0.0f,0.0f);
+    
+    for (float t = 0.0; t < 1.0; t += 0.01){
+        for(unsigned i = 0; i < cpoints.size(); ++i){
+            x += binomial(cpoints.size(), i ,t) * cpoints[i][0];
+            y += binomial(cpoints.size(), i ,t) * cpoints[i][1];
+        }
+        
+        glVertex2f(x,y);
+        x = 0;
+        y = 0;
+        
+        
+    }
+    
+    
+    
     // just for example, remove if desired
+    /*
     glVertex2f(-.5f,-.5f);
     glVertex2f(.5f,-.5f);
     glVertex2f(.5f,.5f);
     glVertex2f(-.5f,.5f);
+    */
+    
     glEnd();
     glFlush();
 }
@@ -51,8 +71,12 @@ void GL_mouse(int button,int state,int x,int y)
     if(button==GLUT_LEFT_BUTTON && state==GLUT_DOWN){
         double px,py,dummy_z; // we don't care about the z-value but need something to pass in
         gluUnProject(x,y,0,mv_mat,proj_mat,vp_mat,&px,&py,&dummy_z);
+        
+        cpoints.push_back(vec2(px,py));
         glutPostRedisplay();
     }
+    
+    
 }
 
 //Initializes OpenGL attributes
