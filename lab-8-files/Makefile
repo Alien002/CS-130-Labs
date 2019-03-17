@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -g -O3
+CXXFLAGS = -std=c++11 -Wall -g -O3
 LIBS  = -lGL -lGLU -lglut -lpng
 SRCS = $(wildcard *.cpp)
 OBJS := ${SRCS:.cpp=.o}

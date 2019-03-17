@@ -125,7 +125,7 @@ void application::draw_event()
     if (!paused) {
         //
         //ADD NEW PARTICLES
-        //Add_Particles(1);
+        Add_Particles(10);
         //
         // SIMULATE YOUR PARTICLE HERE.
         
