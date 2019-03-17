@@ -1,0 +1,108 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		402FDBA7223EFD9400604611 /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		402FDBA8223EFD9400604611 /* application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
+		402FDBA9223EFD9400604611 /* crater.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = crater.mtl; sourceTree = "<group>"; };
+		402FDBAA223EFD9400604611 /* crater.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = crater.obj; sourceTree = "<group>"; };
+		402FDBAB223EFD9400604611 /* gl_arcball.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gl_arcball.cpp; sourceTree = "<group>"; };
+		402FDBAC223EFD9400604611 /* gl_arcball.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_arcball.h; sourceTree = "<group>"; };
+		402FDBAD223EFD9400604611 /* gl_texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gl_texture.cpp; sourceTree = "<group>"; };
+		402FDBAE223EFD9400604611 /* gl_texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_texture.h; sourceTree = "<group>"; };
+		402FDBAF223EFD9400604611 /* gl_viewer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gl_viewer.cpp; sourceTree = "<group>"; };
+		402FDBB0223EFD9400604611 /* gl_viewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_viewer.h; sourceTree = "<group>"; };
+		402FDBB1223EFD9400604611 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		402FDBB2223EFD9400604611 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		402FDBB3223EFD9400604611 /* mat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mat.h; sourceTree = "<group>"; };
+		402FDBB4223EFD9400604611 /* obj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = obj.cpp; sourceTree = "<group>"; };
+		402FDBB5223EFD9400604611 /* obj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = obj.h; sourceTree = "<group>"; };
+		402FDBB6223EFD9400604611 /* particle.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = particle.pdf; sourceTree = "<group>"; };
+		402FDBB7223EFD9400604611 /* timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
+		402FDBB8223EFD9400604611 /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
+		402FDBB9223EFD9400604611 /* vec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vec.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		40A369FF2209F98D00A2F833 = {
+			isa = PBXGroup;
+			children = (
+				402FDBA7223EFD9400604611 /* application.cpp */,
+				402FDBA8223EFD9400604611 /* application.h */,
+				402FDBA9223EFD9400604611 /* crater.mtl */,
+				402FDBAA223EFD9400604611 /* crater.obj */,
+				402FDBAB223EFD9400604611 /* gl_arcball.cpp */,
+				402FDBAC223EFD9400604611 /* gl_arcball.h */,
+				402FDBAD223EFD9400604611 /* gl_texture.cpp */,
+				402FDBAE223EFD9400604611 /* gl_texture.h */,
+				402FDBAF223EFD9400604611 /* gl_viewer.cpp */,
+				402FDBB0223EFD9400604611 /* gl_viewer.h */,
+				402FDBB1223EFD9400604611 /* main.cpp */,
+				402FDBB2223EFD9400604611 /* Makefile */,
+				402FDBB3223EFD9400604611 /* mat.h */,
+				402FDBB4223EFD9400604611 /* obj.cpp */,
+				402FDBB5223EFD9400604611 /* obj.h */,
+				402FDBB6223EFD9400604611 /* particle.pdf */,
+				402FDBB7223EFD9400604611 /* timer.cpp */,
+				402FDBB8223EFD9400604611 /* timer.h */,
+				402FDBB9223EFD9400604611 /* vec.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		40A36A002209F98D00A2F833 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+			};
+			buildConfigurationList = 40A36A032209F98D00A2F833 /* Build configuration list for PBXProject "lab-8" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 40A369FF2209F98D00A2F833;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		40A36A042209F98D00A2F833 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		40A36A052209F98D00A2F833 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40A36A032209F98D00A2F833 /* Build configuration list for PBXProject "lab-8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40A36A042209F98D00A2F833 /* Debug */,
+				40A36A052209F98D00A2F833 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40A36A002209F98D00A2F833 /* Project object */;
+}

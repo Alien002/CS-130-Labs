@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <unistd.h>
+#include <ctime>
 
 #ifndef __APPLE__
 #include <GL/gl.h>
@@ -17,6 +18,9 @@
 #endif
 
 using namespace std;
+
+vector<Particle> particles;     //global variable
+
 enum { NONE, AMBIENT, DIFFUSE, SPECULAR, NUM_MODES };
 
 void draw_grid(int dim);
@@ -121,10 +125,10 @@ void application::draw_event()
     if (!paused) {
         //
         //ADD NEW PARTICLES
-        //
+        //Add_Particles(1);
         //
         // SIMULATE YOUR PARTICLE HERE.
-        //
+        
         //
         //
         // UPDATE THE COLOR OF THE PARTICLE DYNAMICALLY
@@ -307,3 +311,51 @@ void draw_obj(obj *o, const gl_image_texture_map& textures)
     glDisable(GL_TEXTURE_2D);
     glEnable(GL_COLOR_MATERIAL);
 }
+
+
+
+
+void Particle::Euler_Step(float h){
+    for(unsigned i = 0; i < sizeof(particles); ++i){
+        particles[i].oldPosition = particles[i].position;
+        particles[i].position = particles[i].position + h * particles[i].velocity;
+        particles[i].velocity = ((particles[i].position - particles[i].oldPosition) / h) + ((h / particles[i].mass) * particles[i].force);
+    }
+}
+
+void Particle::Reset_Forces(){
+    for(unsigned i = 0; i < sizeof(particles); ++i){
+        particles[i].force = {0,0,0};
+
+    }
+}
+
+void Particle::Handle_Collision(float damping, float coeff_restitution){
+    
+}
+
+
+
+
+
+void Add_Particles(int n){
+    //sizeof(particles) = 0;
+    int curr;
+    for(int i = 0; i < n; ++i){
+        particles.resize(particles.size() + 1);
+        curr = particles.size() - 1;
+        //particles[i] = new particles;
+        particles[curr].mass = 1;
+        particles[curr].position = {random(1.2), 0.05, random(1.2)};
+        particles[curr].velocity = {10* particles[curr].position[0], random(10), 10* particles[curr].position[2]};
+        particles[curr].color = {255, 255, 0}; //yellow
+
+    }
+}
+
+float random(float k){
+    srand(static_cast<unsigned int>(clock()));      //dont know if need this
+    
+    return k + ((float) rand()) / ((float) (RAND_MAX * (k - 1)));
+}
+

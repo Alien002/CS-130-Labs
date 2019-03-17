@@ -38,4 +38,27 @@ private:
     float h;
 };
 
+struct Particle{
+public:
+    //variables
+    vec3 position;
+    vec3 oldPosition;
+    vec3 velocity;
+    vec3 color;
+    vec3 force;
+    float mass;
+    float d;            //duration
+    
+    
+    
+    //functions
+    void Euler_Step(float h);
+    void Reset_Forces();
+    void Handle_Collision(float damping, float coeff_restitution);
+ 
+};
+void Add_Particles(int);
+float random(float);
+
+
 #endif
