@@ -58,7 +58,7 @@ public:
  
 };
 void Add_Particles(int);
-float random(float,float);
-
+float random1(float,float);
+vec3 Get_Particle_Color(float);
 
 #endif
