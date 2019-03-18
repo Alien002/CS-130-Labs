@@ -58,7 +58,7 @@ public:
  
 };
 void Add_Particles(int);
-float random(float);
+float random(float,float);
 
 
 #endif

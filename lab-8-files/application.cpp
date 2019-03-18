@@ -125,14 +125,21 @@ void application::draw_event()
     if (!paused) {
         //
         //ADD NEW PARTICLES
-        Add_Particles(10);
         //
-        // SIMULATE YOUR PARTICLE HERE.
-        
+        //
+        // SIMULATE YOUR PARTICLE HERE
         //
         //
         // UPDATE THE COLOR OF THE PARTICLE DYNAMICALLY
         //
+        Add_Particles(20);
+        
+        for(unsigned i = 0; i < particles.size(); ++i){
+            particles[i].Euler_Step(0.02);
+            particles[i].force[1] = -9.8 * particles[i].mass;
+            particles[i].Handle_Collision(0.5,0.5);
+            particles[i].Reset_Forces();
+        }
     }
 
     glLineWidth(2.0);
@@ -145,7 +152,18 @@ void application::draw_event()
         // glVertex3f(...) endpoint 1
         // glVertex3f(...) endpoint 2
         //
-        //
+    for(unsigned i = 0; i < particles.size(); ++i){
+        glColor3f(particles[i].color[0], particles[i].color[1], particles[i].color[2]);
+        
+        glVertex3f(particles[i].position[0], particles[i].position[1], particles[i].position[2]);
+        
+        glVertex3f(particles[i].position[0] + (0.04 * particles[i].velocity[0]),
+                   particles[i].position[1] + (0.04 * particles[i].velocity[1]),
+                   particles[i].position[2] + (0.04 * particles[i].velocity[2]));
+        //particles[i].position = ;
+
+    }
+    
     glEnd();
 
     // draw the volcano
@@ -313,10 +331,20 @@ void draw_obj(obj *o, const gl_image_texture_map& textures)
 }
 
 
+/*
+ vec3 position;
+ vec3 oldPosition;
+ vec3 velocity;
+ vec3 color;
+ vec3 force;
+ float mass;
+ float d;
+ */
+
 
 
 void Particle::Euler_Step(float h){
-    for(unsigned i = 0; i < sizeof(particles); ++i){
+    for(unsigned i = 0; i < particles.size(); ++i){
         particles[i].oldPosition = particles[i].position;
         particles[i].position = particles[i].position + h * particles[i].velocity;
         particles[i].velocity = ((particles[i].position - particles[i].oldPosition) / h) + ((h / particles[i].mass) * particles[i].force);
@@ -324,14 +352,19 @@ void Particle::Euler_Step(float h){
 }
 
 void Particle::Reset_Forces(){
-    for(unsigned i = 0; i < sizeof(particles); ++i){
+    for(unsigned i = 0; i < particles.size(); ++i){
         particles[i].force = {0,0,0};
 
     }
 }
 
 void Particle::Handle_Collision(float damping, float coeff_restitution){
-    
+    if(position[1] < 0){        //if y < 0
+        position[1] = 0;
+        velocity[1] = coeff_restitution * velocity[1];  //y
+        velocity[0] = damping * velocity[0];            //x
+        velocity[2] = damping * velocity[2];            //x
+    }
 }
 
 
@@ -346,16 +379,16 @@ void Add_Particles(int n){
         curr = particles.size() - 1;
         //particles[i] = new particles;
         particles[curr].mass = 1;
-        particles[curr].position = {random(1.2), 0.05, random(1.2)};
-        particles[curr].velocity = {10* particles[curr].position[0], random(10), 10* particles[curr].position[2]};
+        particles[curr].position = {random(0, 0.2), static_cast<float>(0.05), random(0,0.2)};
+        particles[curr].velocity = {10* particles[curr].position[0], static_cast<float>(rand() % 10 + 1), 10* particles[curr].position[2]};
         particles[curr].color = {255, 255, 0}; //yellow
 
     }
 }
 
-float random(float k){
-    srand(static_cast<unsigned int>(clock()));      //dont know if need this
+float random(float k, float n){
+    //srand(static_cast<unsigned int>(clock()));      //dont know if need this
     
-    return k + ((float) rand()) / ((float) (RAND_MAX * (k - 1)));
+    return (k + static_cast<float>( rand())) / static_cast<float>( (RAND_MAX / (n-k)));
 }
 
